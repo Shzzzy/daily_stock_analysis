@@ -56,9 +56,6 @@ jobs:
         run: |
           mkdir -p data logs reports
 
-      - name: Generate Right Side Pool
-        run: python3 ./.github/scripts/right_side_selector.py > stock_list.txt
-      
       - name: Export STOCK_LIST
         run: |
           echo "STOCK_LIST=$(cat stock_list.txt)" >> $GITHUB_ENV
