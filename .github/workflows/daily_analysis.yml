@@ -56,11 +56,8 @@ jobs:
         run: |
           mkdir -p data logs reports
 
-      - name: Debug pwd
-        run: pwd && ls -l
-
       - name: Generate Right Side Pool
-        run: python $GITHUB_WORKSPACE/scripts/right_side_selector.py > stock_list.txt
+        run: python3 scripts/right_side_selector.py > stock_list.txt
       
       - name: Export STOCK_LIST
         run: |
